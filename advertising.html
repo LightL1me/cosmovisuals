@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru" data-site-motion="always">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#030204">
+  <title>Реклама на CosmoVisuals</title>
+  <link rel="icon" type="image/svg+xml" href="assets/native/brand/logo.svg">
+  <link rel="stylesheet" href="styles.css?v=20261025-native-1">
+  <link rel="stylesheet" href="advertising.css?v=20261103-2">
+  <link rel="stylesheet" href="motion.css?v=20261103">
+  <script src="motion.js?v=20261103-2" defer></script>
+  <script src="advertising.js?v=20261103-2" defer></script>
+</head>
+<body class="advertising-page">
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="i-up-right" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
+  </defs></svg>
+  <header class="site-header is-scrolled">
+    <a class="brand" href="./" aria-label="CosmoVisuals — главная"><img src="assets/native/brand/logo.svg" alt="" width="44" height="25"><span>Cosmo<span class="brand-light">Visuals</span></span></a>
+    <a class="button button-small button-ghost" href="./">На главную</a>
+  </header>
+  <main>
+    <div class="page-progress" aria-hidden="true"></div>
+    <section class="advertising page-width section-space" id="advertising" aria-labelledby="ad-title">
+      <div class="ad-intro">
+        <span class="eyebrow section-kicker">Тестовый режим</span>
+        <h1 id="ad-title">Реклама на CosmoVisuals</h1>
+        <p>Укажи домен и сумму. После подтверждения ссылка появится в списке размещений.</p>
+      </div>
+      <div class="ad-layout">
+        <form id="ad-form" class="ad-panel" aria-describedby="ad-note">
+          <h3>Купить размещение</h3>
+          <label for="ad-domain">Домен</label>
+          <input id="ad-domain" type="text" placeholder="example.ru" maxlength="300" inputmode="url" autocomplete="off" autocapitalize="none" spellcheck="false" required>
+          <label for="ad-amount">Сумма в рублях</label>
+          <input id="ad-amount" type="number" placeholder="500" min="1" max="999999999" step="1" inputmode="numeric" required>
+          <p id="ad-note">К списанию 0 ₽. Размещение сохраняется в этом браузере.</p>
+          <button class="button" type="submit">Купить рекламу</button>
+          <p id="ad-status" role="status"></p>
+        </form>
+        <div class="ad-side">
+          <div class="ad-panel ad-display">
+            <div class="ad-display-heading"><h3>Предпросмотр</h3><svg aria-hidden="true"><use href="#i-up-right"/></svg></div>
+            <div class="ad-row ad-preview">
+              <strong id="ad-preview-domain">example.ru</strong>
+              <span id="ad-preview-price">— ₽</span>
+            </div>
+          </div>
+          <div class="ad-panel ad-display">
+            <div class="ad-display-heading"><h3>Рекламные ссылки</h3><svg aria-hidden="true"><use href="#i-up-right"/></svg></div>
+            <p id="ad-empty">Здесь появятся размещённые ссылки.</p>
+            <ul id="ad-list" aria-label="Размещённая реклама" hidden></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

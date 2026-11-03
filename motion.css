@@ -1,0 +1,155 @@
+/* Group reveals are armed by motion.js; settled items return to native styles. */
+html.motion-boot .reveal {
+  opacity: 0;
+}
+
+html.motion-ready [data-motion-item]:not(.motion-settled) {
+  opacity: 0;
+  filter: blur(6px);
+  translate: 0 12px;
+  transition-property: opacity, filter, translate;
+  transition-duration: 1350ms;
+  transition-timing-function: cubic-bezier(.25, .1, .25, 1);
+  transition-delay: var(--motion-delay, 0ms);
+}
+
+html.motion-ready [data-motion-item].motion-entered:not(.motion-settled) {
+  opacity: 1;
+  filter: blur(0);
+  translate: 0 0;
+}
+
+/* Keyboard navigation must never wait for an entrance or its stagger delay. */
+html.motion-ready [data-motion-item]:not(.motion-settled):focus-within {
+  opacity: 1;
+  filter: none;
+  translate: none;
+  transition: none;
+  will-change: auto;
+}
+
+/* No motion properties apply to .motion-settled: existing filters, transforms,
+   translations, and transition rules remain owned by the product stylesheet. */
+.hero-native-scene.active.scene-entering {
+  animation: cosmo-scene-enter 850ms cubic-bezier(.25, .1, .25, 1) backwards;
+}
+
+dialog[open] {
+  animation: cosmo-dialog-enter 300ms cubic-bezier(.22, 1, .36, 1) backwards;
+}
+
+#mobile-nav.is-open {
+  animation: cosmo-menu-enter 220ms cubic-bezier(.22, 1, .36, 1) backwards;
+}
+
+.faq-list details[open] p {
+  animation: cosmo-answer-enter 240ms cubic-bezier(.22, 1, .36, 1) backwards;
+}
+
+.ad-placement-entering {
+  animation: cosmo-placement-enter 380ms cubic-bezier(.22, 1, .36, 1) backwards;
+}
+
+.button svg {
+  transition: translate 220ms cubic-bezier(.22, 1, .36, 1);
+}
+
+@media (hover: hover) {
+  .button:hover svg {
+    translate: 3px 0;
+  }
+}
+
+.page-progress {
+  display: none;
+}
+
+@supports (animation-timeline: scroll()) {
+  .page-progress {
+    display: block;
+    position: fixed;
+    z-index: 35;
+    inset: 0 0 auto;
+    height: 2px;
+    pointer-events: none;
+    background: var(--lavender);
+    transform-origin: left;
+    animation: cosmo-scroll-progress linear both;
+    animation-timeline: scroll(root block);
+  }
+}
+
+@keyframes cosmo-scroll-progress {
+  from { scale: 0 1; }
+  to { scale: 1 1; }
+}
+
+@keyframes cosmo-placement-enter {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes cosmo-scene-enter {
+  from { opacity: .35; filter: blur(5px); }
+  to { opacity: 1; filter: blur(0); }
+}
+
+@keyframes cosmo-dialog-enter {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes cosmo-menu-enter {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes cosmo-answer-enter {
+  from { opacity: .4; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:not([data-site-motion="always"]).motion-boot .reveal {
+    opacity: 1 !important;
+  }
+
+  html:not([data-site-motion="always"]).motion-ready [data-motion-item]:not(.motion-settled) {
+    opacity: 1 !important;
+    filter: none !important;
+    translate: none !important;
+    transition: none !important;
+    will-change: auto !important;
+  }
+
+  html:not([data-site-motion="always"]) .hero-native-scene.active.scene-entering,
+  html:not([data-site-motion="always"]) dialog[open],
+  html:not([data-site-motion="always"]) #mobile-nav.is-open,
+  html:not([data-site-motion="always"]) .faq-list details[open] p,
+  html:not([data-site-motion="always"]) .ad-placement-entering {
+    animation: none !important;
+  }
+
+  html:not([data-site-motion="always"]) .page-progress {
+    display: none;
+  }
+
+  html:not([data-site-motion="always"]) .button svg {
+    transition: none;
+  }
+}
+
+@media (hover: hover) {
+  .feature-card {
+    transition: border-color .3s, box-shadow .3s;
+  }
+
+  .feature-card:hover {
+    border-color: #b88ae478;
+    box-shadow: 0 18px 48px #8b40db28, inset 0 0 28px #8b40db12;
+  }
+
+  .hero-buttons .button:not(.button-ghost):hover {
+    box-shadow: 0 12px 35px #a04aff55;
+  }
+}

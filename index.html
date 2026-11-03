@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ru" data-site-motion="always">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#030204">
+  <meta name="description" content="CosmoVisuals — бесплатный визуальный мод для Minecraft. Настраиваемый HUD, визуальные эффекты и косметика в твоём стиле.">
+  <meta property="og:title" content="CosmoVisuals — твоя игра, твоя вселенная">
+  <meta property="og:description" content="Визуалы, HUD и косметика. Собери свой Minecraft с CosmoVisuals.">
+  <meta property="og:type" content="website">
+  <title>CosmoVisuals — твоя игра, твоя вселенная</title>
+  <link rel="icon" type="image/svg+xml" href="assets/native/brand/logo.svg">
+  <link rel="stylesheet" href="styles.css?v=portrait-1">
+  <link rel="stylesheet" href="product-ui.css?v=portrait-1">
+  <link rel="stylesheet" href="motion.css?v=hover-1">
+  <script>
+    if ('IntersectionObserver' in window) {
+      document.documentElement.classList.add('motion-ready', 'motion-boot');
+      window.cosmoMotionFallback = setTimeout(() => {
+        document.documentElement.classList.remove('motion-ready', 'motion-boot');
+      }, 3000);
+    }
+  </script>
+  <script src="product-ui.js?v=20261025-1" defer></script>
+  <script src="app.js?v=hover-1" defer></script>
+  <script src="motion.js?v=hover-1" defer></script>
+  <script src="download.js?v=20261103-2" defer></script>
+  <script type="module" src="model-viewer.js?v=20261025-3"></script>
+</head>
+<body>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7z"/></symbol>
+    <symbol id="i-up-right" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h7m4 0h5M4 17h3m4 0h9"/><circle cx="13" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 2.8 7.2L22 12l-7.2 2.8L12 22l-2.8-7.2L2 12l7.2-2.8z"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-telegram" viewBox="0 0 24 24"><path d="m21 4-4 17-6-5-3 3 1-6 9-6-11 5-5-2z"/></symbol>
+    <symbol id="i-discord" viewBox="0 0 24 24"><path d="M8 4 5 5C3 8 2 13 2 17l5 3 1-2m8-14 3 1c2 3 3 8 3 12l-5 3-1-2M7 17c3 2 7 2 10 0M9 4l1 2h4l1-2"/><circle cx="8.5" cy="12.5" r="1"/><circle cx="15.5" cy="12.5" r="1"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1 8M4 4v6h6"/></symbol>
+<symbol id="i-halo" viewBox="0 0 24 24"><ellipse cx="12" cy="7" rx="9" ry="3"/><path d="M8 15c0-5 8-5 8 0v6H8z"/></symbol><symbol id="i-fox" viewBox="0 0 24 24"><path d="m4 3 6 4h4l6-4-1 12-7 6-7-6zM8 12h1m6 0h1m-6 4h4"/></symbol><symbol id="i-penguin" viewBox="0 0 24 24"><path d="M5 19V9a7 7 0 0 1 14 0v10l-4 2H9zM9 9h.01M15 9h.01m-6 4 3 2 3-2"/></symbol><symbol id="i-pig" viewBox="0 0 24 24"><path d="m5 8-2-5 7 3h4l7-3-2 5v11H5z"/><rect x="8" y="12" width="8" height="5" rx="2"/><path d="M10 14h.01M14 14h.01M8 9h.01M16 9h.01"/></symbol>
+
+    <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18h2a2 2 0 0 0 0-4h-1a1.5 1.5 0 0 1 0-3h3a5 5 0 0 0 5-5c0-4-4-6-9-6Z"/><path d="M7 8h.01M12 6h.01M17 8h.01M6 13h.01"/></symbol>
+    <symbol id="i-crown" viewBox="0 0 24 24"><path d="m3 6 5 4 4-7 4 7 5-4-3 12H6ZM7 21h10"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6ZM14 3v5h4M9 12h6M9 16h6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M19 9c0 5-7 12-7 12S5 14 5 9a7 7 0 1 1 14 0Z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="14" r="8"/><path d="M9 2h6M12 2v4m6 1 2-2M12 10v5l3 2"/></symbol>
+    <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L5 18a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3M8 14h8"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  </defs></svg>
+  <a class="skip-link" href="#features">Перейти к содержанию</a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="CosmoVisuals — главная"><img src="assets/native/brand/logo.svg" alt="" width="44" height="25"><span>Cosmo<span class="brand-light">Visuals</span></span></a>
+    <nav class="desktop-nav" aria-label="Главная навигация"><a href="#features">Возможности</a><a href="#experience">Сравнение</a><a href="#showcase">Демонстрация</a><a href="advertising.html">Реклама</a><a href="#faq">FAQ</a></nav>
+    <div class="header-actions"><a class="social-icon header-social header-telegram" href="https://t.me/cosmovisuals" target="_blank" rel="noopener noreferrer" aria-label="Telegram CosmoVisuals"><svg><use href="#i-telegram"/></svg></a><a class="social-icon header-social" href="https://dsc.gg/cosmovisuals" target="_blank" rel="noopener noreferrer" aria-label="Discord CosmoVisuals"><svg><use href="#i-discord"/></svg></a><button class="button button-small" data-open-download>Скачать <svg><use href="#i-download"/></svg></button><button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Открыть меню"><span></span><span></span></button></div>
+  </header>
+  <nav id="mobile-nav" aria-label="Мобильная навигация"><a href="#features">Возможности</a><a href="#experience">Сравнение</a><a href="#showcase">Демонстрация</a><a href="advertising.html">Реклама</a><a href="#faq">FAQ</a><a href="https://t.me/cosmovisuals" target="_blank" rel="noopener noreferrer">Telegram ↗</a></nav>
+  <main>
+    <div class="page-progress" aria-hidden="true"></div>
+    <section class="hero" id="home">
+      <div class="hero-cover">
+        <div class="hero-rift-art" aria-hidden="true">
+          <svg viewBox="0 0 1683 935" focusable="false">
+            <defs>
+              <image id="rift-texture" href="assets/hero-rift.png" width="1683" height="935"/>
+              <filter id="rift-glow-soften" x="-.15" y="-.15" width="1.3" height="1.3">
+                <feGaussianBlur stdDeviation="34"/>
+              </filter>
+              <linearGradient id="rift-ray-color" x1="100%" y1="100%" x2="0%" y2="0%">
+                <stop stop-color="#fff0ff" stop-opacity="1"/>
+                <stop offset=".52" stop-color="#d195ff" stop-opacity=".68"/>
+                <stop offset="1" stop-color="#883eff" stop-opacity="0"/>
+              </linearGradient>
+              <clipPath id="rift-ray-opening">
+                <path d="M997 675 L1006 651 L1023 644 L1034 636 L1040 620 L1048 596 L1066 590 L1074 582 L1084 570 L1092 558 L1102 552 L1146 544 L1178 535 L1187 536 L1156 548 L1142 556 L1102 562 L1090 576 L1072 597 L1062 623 L1054 636 L1037 649 L1026 675 Z"/>
+              </clipPath>
+              <mask id="rift-glow-band">
+                <path class="rift-light-trail" pathLength="100" d="M160 1080 L475 930 L647 876 L739 831 L849 762 L963 720 L1045 669 L1085 594 L1141 563 L1255 526 L1299 445 L1366 396 L1417 349 L1463 280 L1510 190 L1542 107 L1584 44 L1640 -20 L1850 -240" fill="none" stroke="white" stroke-width="104" filter="url(#rift-glow-soften)"/>
+              </mask>
+            </defs>
+            <use href="#rift-texture"/>
+            <use class="rift-glow" href="#rift-texture" mask="url(#rift-glow-band)"/>
+            <g clip-path="url(#rift-ray-opening)">
+              <g class="rift-rays" fill="url(#rift-ray-color)" stroke="none">
+                <path d="M1007 674 L1012 652 L1035 638 L1020 653 L1018 674 Z"/>
+                <path d="M1045 632 L1049 608 L1064 595 L1057 611 L1053 632 Z"/>
+                <path d="M1093 568 L1104 556 L1157 544 L1113 558 L1100 568 Z"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="hero-copy">
+          <span class="hero-version eyebrow">Версия 0.7 Beta</span>
+          <h1 class="hero-brand">CosmoVisuals</h1>
+          <p class="hero-slogan">Твоя игра. Твоя вселенная.</p>
+          <p class="hero-description">Визуалы, HUD и косметика для Minecraft.</p>
+          <div class="hero-buttons"><button class="button" data-open-download>Скачать бесплатно <svg><use href="#i-download"/></svg></button><a class="button button-ghost" href="#features">Подробнее <svg><use href="#i-arrow"/></svg></a></div>
+          <div class="hero-compatibility"><span class="compatibility-mark"><svg><use href="#i-check"/></svg></span> Minecraft 1.21.11 <span>·</span> Fabric <span>·</span> Java 21+</div>
+        </div>
+      </div>
+      <div class="spec-strip page-width"><div><strong>31</strong><span>визуальная функция</span></div><span class="spec-cross" aria-hidden="true">✦</span><div><strong>9</strong><span>элементов HUD</span></div><span class="spec-cross" aria-hidden="true">✦</span><div><strong>11</strong><span>утилит</span></div><span class="spec-cross" aria-hidden="true">✦</span><div class="free-spec"><svg><use href="#i-spark"/></svg><span>Полностью<br><strong>бесплатно</strong></span></div></div>
+      <div class="hero-stage" draggable="false" aria-label="Интерфейс CosmoVisuals">
+        <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
+        <div class="scene-switcher" role="tablist" aria-label="Предпросмотр интерфейса"><button role="tab" id="tab-gui" aria-controls="scene-gui" data-scene="gui" class="active" aria-selected="true"><svg><use href="#i-sliders"/></svg>Визуалы</button><button role="tab" id="tab-cosmetics" aria-controls="scene-cosmetics" data-scene="cosmetics" aria-selected="false"><svg><use href="#i-spark"/></svg>Косметика</button><button role="tab" id="tab-menu" aria-controls="scene-menu" data-scene="menu" aria-selected="false"><svg><use href="#i-grid"/></svg>Меню</button></div>
+        <div class="interface-frame"><div data-hero-scene="gui" id="scene-gui" role="tabpanel" aria-labelledby="tab-gui" class="hero-native-scene active"><div data-gui-demo="visuals" data-gui-interactive="true" aria-label="Интерактивный интерфейс CosmoVisuals 0.7"></div></div><div data-hero-scene="cosmetics" id="scene-cosmetics" role="tabpanel" aria-labelledby="tab-cosmetics" class="hero-native-scene" hidden><div data-gui-demo="cosmetics" aria-label="Косметика CosmoVisuals 0.7"></div></div><div data-hero-scene="menu" id="scene-menu" role="tabpanel" aria-labelledby="tab-menu" class="hero-native-scene menu-scene" hidden><img src="assets/main-menu.png" draggable="false" alt="Главное меню CosmoVisuals с фиолетовой планетой и замком у озера" width="1280" height="720"></div></div>
+        <span class="native-hud native-watermark floating-hud hero-watermark"><img src="assets/native/brand/logo.svg" alt=""><strong>CosmoVisuals</strong><i></i><span>739 FPS</span><i></i><span>12 ms</span></span>
+        <span class="native-hud native-target floating-hud hero-target"><span class="skin-face"></span><span class="target-content"><strong>MrTravelYT</strong><span class="target-health">Здоровье <b>20.0</b></span><span class="health-track"><span></span></span></span></span>
+        <span class="native-hud native-effects floating-hud hero-effects"><span class="hud-line"><svg aria-hidden="true"><use href="#i-flask"/></svg><strong>Эффекты</strong></span><span class="hud-description">Нет активных эффектов</span></span>
+        <span class="stage-caption"><span></span> COSMOVISUALS 0.7 · АВРОРА</span>
+      </div>
+      <div class="hero-bottom-line" aria-hidden="true"></div>
+    </section>
+
+    <section class="features page-width section-space" id="features">
+      <div class="section-heading reveal"><div><span class="eyebrow section-kicker">Возможности мода</span><h2>Больше возможностей.<br><span class="gradient-text">Больше твоего стиля.</span></h2></div><p>Визуалы, удобный интерфейс и полезные детали.<br>Всё для твоего Minecraft — в CosmoVisuals 0.7.</p></div>
+      <div class="feature-grid">
+        <article class="feature-card hud-card reveal">
+          <h3>Конструктор HUD</h3><p>Перетащи панели и сохрани раскладку в браузере.</p>
+          <div class="hud-playground" id="hud-playground" aria-label="Интерактивная демонстрация HUD">
+
+            <button class="draggable hud-demo-watermark" data-hud="watermark" aria-label="Переместить панель CosmoVisuals. Используйте мышь или стрелки"><span class="native-hud native-watermark "><img src="assets/native/brand/logo.svg" alt=""><strong>CosmoVisuals</strong><i></i><span>739 FPS</span><i></i><span>12 ms</span></span></button>
+            <button class="draggable hud-demo-target" data-hud="target" aria-label="Переместить панель игрока. Используйте мышь или стрелки"><span class="native-hud native-target "><span class="skin-face"></span><span class="target-content"><strong>MrTravelYT</strong><span class="target-health">Здоровье <b>20.0</b></span><span class="health-track"><span></span></span></span></span></button>
+            <button class="draggable hud-demo-effects" data-hud="effects" aria-label="Переместить панель эффектов. Используйте мышь или стрелки"><span class="native-hud native-effects "><span class="hud-line"><svg aria-hidden="true"><use href="#i-flask"/></svg><strong>Эффекты</strong></span><span class="hud-description">Нет активных эффектов</span></span></button>
+            <button class="draggable hud-demo-cooldowns" data-hud="cooldowns" aria-label="Переместить перезарядки. Используйте мышь или стрелки"><span class="native-hud native-cooldowns "><span class="hud-line"><svg aria-hidden="true"><use href="#i-clock"/></svg><strong>Cooldowns</strong></span><span class="hud-description">Нет перезарядок</span></span></button>
+          </div>
+          <div class="hud-toolbar"><label><input type="checkbox" data-hud-toggle="target" checked><span></span>Target HUD</label><label><input type="checkbox" data-hud-toggle="effects" checked><span></span>Эффекты</label><button id="reset-hud" class="reset-button" aria-label="Сбросить расположение HUD"><svg><use href="#i-reset"/></svg></button></div>
+          <div class="hud-settings">
+            <button id="save-hud" class="button button-outline" type="button">Сохранить HUD</button>
+          </div>
+          <p id="hud-status" role="status"></p>
+        </article>
+        <article class="feature-card visual-card reveal">
+          <h3>Визуальные модули</h3><p>Настроение мира, мягкое свечение и эффекты в твоём стиле.</p>
+          <div class="visual-preview" id="visual-preview" data-ambience="true" data-bloom="true" data-crosshair="true"><img class="benefit-world" src="assets/gameplay-off.webp" alt="Игровой мир Minecraft для примера визуальных настроек" loading="lazy" width="1919" height="1112"><div class="ambient-tint" aria-hidden="true"></div><div class="bloom-light" aria-hidden="true"></div><span class="preview-crosshair" aria-hidden="true">+</span><img class="benefit-character" src="assets/character-flight.png" alt="Ваш персонаж в шапке пингвина с крыльями" width="1536" height="1024" loading="lazy"></div>
+          <div class="visual-controls" role="group" aria-label="Пример визуальных настроек"><button role="switch" aria-checked="true" data-visual="ambience">Ambience<span class="mini-switch"></span></button><button role="switch" aria-checked="true" data-visual="bloom">Bloom<span class="mini-switch"></span></button><button role="switch" aria-checked="true" data-visual="crosshair">Crosshair<span class="mini-switch"></span></button></div>
+        </article>
+        <article class="feature-card utilities-card reveal"><h3>Игровые утилиты</h3><p>Перезарядки, смена экипировки и быстрые действия под рукой.</p><div class="benefit-visual" role="img" aria-label="Утилиты CosmoVisuals: Cooldowns, ElytraSwap, HitSound"><div data-gui-demo="utilities"></div></div></article>
+        <article class="feature-card marks-card reveal"><h3>Система меток</h3><p>Отмечай важные места и возвращайся к ним без долгих поисков.</p><div class="marker-demo"><span class="cv-marker"><strong><svg><use href="#i-pin"/></svg>База</strong><span>161 м</span></span><span class="cv-marker"><strong><svg><use href="#i-spark"/></svg>Портал</strong><span>420 м</span></span></div></article>
+        <article class="feature-card configs-card reveal"><h3>Твои конфигурации</h3><p>Сохраняй любимые настройки и переключайся между готовыми образами.</p><div class="config-demo"><strong><svg><use href="#i-file"/></svg>Конфиги</strong><small>Всё настроено. Всё сохранено.</small><div class="config-row is-active"><span>Мой стиль</span><small>Загружен</small><svg><use href="#i-check"/></svg></div><div class="config-row"><span>Минимализм</span><small>Сохранён</small></div></div></article>
+        <article class="feature-card information-card reveal"><h3>Всё под контролем</h3><p>Название, FPS и пинг в одной капсуле. Важная информация — с первого взгляда.</p><div class="watermark-demo"><span class="native-hud native-watermark"><img src="assets/native/brand/logo.svg" alt=""><strong>CosmoVisuals</strong><i></i><span>739 FPS</span><i></i><span>12 ms</span></span><small>ТВОЯ ИГРА В ДЕТАЛЯХ</small></div></article>
+      </div>
+        <article class="feature-card cosmetics-card reveal">
+          <div class="cosmetic-text"><span class="eyebrow section-kicker">КОСМЕТИКА</span><h3>Выделяйся.<br>Оставайся собой.</h3><p>Маленькая деталь. Большая разница.<br>Выбери образ и повращай персонажа.</p><div class="cosmetic-options" role="group" aria-label="Выбор косметики"><button data-character="halo" class="active" aria-pressed="true" aria-label="Нимб" title="Нимб"><img src="assets/generated-icons/halo.png" alt="" width="26" height="26" draggable="false" decoding="async"></button><button data-character="fox" aria-pressed="false" aria-label="Лиса" title="Лиса"><img src="assets/generated-icons/fox.png" alt="" width="26" height="26" draggable="false" decoding="async"></button><button data-character="penguin" aria-pressed="false" aria-label="Пингвин" title="Пингвин"><img src="assets/generated-icons/penguin.png" alt="" width="26" height="26" draggable="false" decoding="async"></button><button data-character="pig" aria-pressed="false" aria-label="Свинка" title="Свинка"><img src="assets/generated-icons/pig.png" alt="" width="26" height="26" draggable="false" decoding="async"></button></div><span id="cosmetic-name" class="cosmetic-name" aria-live="polite">Нимб</span></div>
+          <div class="character-stage"><div class="character-orbit" aria-hidden="true"></div><div id="cosmetic-viewer" class="native-model" data-model-viewer="halo" data-character="halo" aria-label="3D-модель персонажа. Перетащите, чтобы повернуть."></div><span class="rotation-hint" aria-hidden="true">↔ поверни меня</span></div>
+        </article>
+    </section>
+
+    <section class="experience section-space" id="experience">
+      <div class="page-width"><div class="section-heading reveal"><div><span class="eyebrow section-kicker">Разница в деталях</span><h2>Один мир.<br><span class="gradient-text">Два ощущения.</span></h2></div><p>Потяни за разделитель.<br>Слева — CosmoVisuals. Справа — привычный Minecraft.</p></div>
+        </div>
+      <div class="comparison comparison-wide reveal" id="comparison" style="--split:50%">
+          <img class="compare-base" src="assets/gameplay-off.webp" alt="Minecraft без CosmoVisuals" loading="lazy" width="1919" height="1112">
+          <div class="compare-overlay"><img src="assets/gameplay-on.webp" alt="Minecraft с CosmoVisuals" loading="lazy" width="1919" height="1107"></div>
+          <div class="compare-badges"><span><span class="status-dot"></span> С COSMOVISUALS</span><span>MINECRAFT</span></div>
+          <div class="compare-divider" aria-hidden="true"><span>‹ <b>Ⅱ</b> ›</span></div>
+          <input id="compare-range" type="range" min="0" max="100" value="50" aria-label="Сравнение Minecraft с CosmoVisuals и без него">
+      </div>
+    </section>
+
+    <section class="showcase page-width section-space" id="showcase">
+      <div class="showcase-copy reveal"><span class="eyebrow section-kicker">Настрой под себя</span><h2>Меньше лишнего.<br><span class="gradient-text">Больше тебя.</span></h2><p>Визуалы, HUD и косметика в одном интерфейсе.<br>Всё, чтобы твой Minecraft ощущался твоим.</p><ul class="plain-features"><li><svg><use href="#i-check"/></svg> Визуальные модули</li><li><svg><use href="#i-check"/></svg> Настраиваемый интерфейс</li><li><svg><use href="#i-check"/></svg> Косметика и игровые утилиты</li></ul><button class="button button-outline" data-open-download>Забрать CosmoVisuals <svg><use href="#i-up-right"/></svg></button></div>
+      <div class="showcase-scene reveal"><div class="showcase-glow" aria-hidden="true"></div><div class="showcase-gui" data-gui-demo="visuals" aria-label="Меню настройки CosmoVisuals 0.7"></div><span class="native-hud native-scoreboard showcase-score"><strong>Скорборд</strong><span></span><span></span><span></span><span></span></span><span class="native-hud native-boss showcase-boss"><span class="boss-label">Боссбар</span><span class="boss-track"><span></span></span></span></div>
+    </section>
+
+
+    <section class="faq page-width section-space" id="faq"><div class="faq-intro reveal"><span class="eyebrow section-kicker">F.A.Q.</span><h2>Есть вопросы<span class="gradient-text">?</span></h2><p>Мы рядом. Загляни в наше сообщество.</p><div class="community-links"><a href="https://dsc.gg/cosmovisuals" target="_blank" rel="noopener noreferrer"><svg><use href="#i-discord"/></svg>Discord<svg class="small-arrow"><use href="#i-up-right"/></svg></a><a href="https://t.me/cosmovisuals" target="_blank" rel="noopener noreferrer"><svg><use href="#i-telegram"/></svg>Telegram<svg class="small-arrow"><use href="#i-up-right"/></svg></a></div></div>
+      <div class="faq-list reveal"><details open><summary>CosmoVisuals бесплатный?<span>+</span></summary><p>Да. Мод бесплатный, подписка и оплата не нужны.</p></details><details><summary>Как установить мод?<span>+</span></summary><p>Скачай CosmoVisuals 0.7 Beta. Нужны Minecraft 1.21.11, Fabric Loader 0.19.5+, Fabric API и Java 21+. Помести JAR в папку mods и запусти профиль Fabric.</p></details><details><summary>Что можно настроить?<span>+</span></summary><p>Визуальные эффекты, элементы HUD, косметику и утилиты. Интерфейс и примеры показаны на этой странице.</p></details><details><summary>Где следить за обновлениями?<span>+</span></summary><p>В нашем <a href="https://t.me/cosmovisuals" target="_blank" rel="noopener noreferrer">Telegram</a> и <a href="https://dsc.gg/cosmovisuals" target="_blank" rel="noopener noreferrer">Discord</a>. Там же можно задать вопрос.</p></details><details><summary>Можно использовать на любом сервере?<span>+</span></summary><p>У каждого сервера свои правила модификаций. Проверь их перед использованием и включай только разрешённые функции.</p></details></div>
+    </section>
+
+    <section class="final-cta page-width reveal" id="download"><div class="cta-orbit" aria-hidden="true"></div><div class="cta-character cta-character-left" data-model-viewer="fox" aria-hidden="true"></div><div class="cta-copy"><h2>Твой Minecraft.<br><span class="gradient-text">Новая орбита.</span></h2><button class="button" data-open-download>Скачать CosmoVisuals <svg><use href="#i-download"/></svg></button></div><div class="cta-character cta-character-right" data-model-viewer="penguin" aria-hidden="true"></div></section>
+  </main>
+  <footer class="page-width"><div class="footer-top"><a class="brand" href="#home"><img src="assets/native/brand/logo.svg" alt="" width="44" height="25"><span>Cosmo<span class="brand-light">Visuals</span></span></a><span>Твоя игра. Твоя вселенная.</span><div class="footer-socials"><a class="social-icon" href="https://dsc.gg/cosmovisuals" target="_blank" rel="noopener noreferrer" aria-label="Discord CosmoVisuals"><svg><use href="#i-discord"/></svg></a><a class="social-icon" href="https://t.me/cosmovisuals" target="_blank" rel="noopener noreferrer" aria-label="Telegram CosmoVisuals"><svg><use href="#i-telegram"/></svg></a></div></div><div class="footer-bottom"><span>© 2026 CosmoVisuals</span><span>Не связан с Mojang или Microsoft.</span><a href="#home">Наверх ↑</a></div></footer>
+  <dialog id="download-dialog" aria-labelledby="download-title"><button class="dialog-close" data-close-dialog aria-label="Закрыть окно">×</button><img class="dialog-logo" src="assets/native/brand/logo.svg" alt="" width="86" height="48"><span class="eyebrow">COSMOVISUALS · 0.7 BETA</span><h2 id="download-title">Твоя новая орбита.</h2><p>CosmoVisuals 0.7 Beta · 124,7 МБ</p><button id="download-file" class="button" data-manifest="downloads/manifest.json">Скачать мод бесплатно <svg><use href="#i-download"/></svg></button><div id="download-progress" hidden><progress id="download-meter" max="100" value="0"></progress><div class="download-progress-row"><span id="download-status" role="status">Подготовка…</span><button id="cancel-download" type="button">Отмена</button></div></div>
+    <section class="install-guide" aria-labelledby="install-title">
+      <h3 id="install-title">Как установить мод</h3>
+      <ol>
+        <li>Подготовь <strong>Java 21+</strong> и профиль <strong>Minecraft 1.21.11</strong>.</li>
+        <li>Установи <strong>Fabric Loader 0.19.5+</strong> и скачай <strong>Fabric API для Minecraft 1.21.11</strong>.</li>
+        <li>Положи JAR-файлы CosmoVisuals и Fabric API в папку <code>mods</code>. Запусти профиль Fabric.</li>
+      </ol>
+      <label for="install-os">Путь для</label>
+      <select id="install-os"><option value="windows">Windows</option><option value="macos">macOS</option><option value="linux">Linux</option></select>
+      <input id="mods-path" aria-label="Путь к папке mods" value="%APPDATA%\.minecraft\mods" readonly spellcheck="false">
+      <button id="copy-mods-path" type="button" class="button button-outline">Скопировать путь к папке mods</button>
+      <p id="copy-mods-status" role="status"></p>
+      <small>Для отдельной игровой папки профиля используй папку <code>mods</code> внутри неё. Если папки <code>mods</code> ещё нет, создай её.</small>
+    </section>
+  <div class="dialog-socials"><a href="https://t.me/cosmovisuals" target="_blank" rel="noopener noreferrer">Новости в Telegram ↗</a><a href="https://dsc.gg/cosmovisuals" target="_blank" rel="noopener noreferrer">Наш Discord ↗</a></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

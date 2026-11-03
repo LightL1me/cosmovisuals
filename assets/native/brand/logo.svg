@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="2347" viewBox="48 185 548 314" role="img" aria-labelledby="title description">
+  <title id="title">CosmoVisuals CV monogram</title>
+  <desc id="description">Violet C and white V, matching the supplied ring-free reference. Two editable closed paths on a transparent background.</desc>
+  <defs>
+    <linearGradient id="violet-c" gradientUnits="userSpaceOnUse" x1="190" y1="198" x2="328" y2="486">
+      <stop offset="0" stop-color="#8415FF"/>
+      <stop offset="1" stop-color="#7C10F4"/>
+    </linearGradient>
+    <linearGradient id="white-v" gradientUnits="userSpaceOnUse" x1="346" y1="255" x2="409" y2="478">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F7F7FA"/>
+    </linearGradient>
+  </defs>
+  <path id="geometric-c" fill="url(#violet-c)" d="M 190 198 L 417 198 L 361 254 L 212 254 L 140 330 L 184 383 L 328 383 L 395 486 L 307 438 L 151 438 L 60 330 Z"/>
+  <path id="geometric-v" fill="url(#white-v)" d="M 223 277 L 346 277 L 414 383 L 515 255 L 583 255 L 409 478 L 308 317 L 257 317 Z"/>
+</svg>
