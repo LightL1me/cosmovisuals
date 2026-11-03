@@ -153,3 +153,27 @@ dialog[open] {
     box-shadow: 0 12px 35px #a04aff55;
   }
 }
+
+/* Animate the answer box, including its height, where supported. */
+@supports (interpolate-size: allow-keywords) and selector(details::details-content) {
+  .faq-list details { interpolate-size: allow-keywords; }
+  .faq-list details::details-content {
+    block-size: 0;
+    opacity: 0;
+    overflow: clip;
+    transition: block-size .26s ease, opacity .2s ease, content-visibility .26s allow-discrete;
+  }
+  .faq-list details[open]::details-content {
+    block-size: auto;
+    opacity: 1;
+  }
+  .faq-list details[open] p { animation: none; }
+}
+
+@media (max-width: 620px) {
+  html.motion-ready .hero-stage [data-motion-item]:not(.motion-settled) {
+    filter: none;
+    translate: none;
+    transition-property: opacity;
+  }
+}

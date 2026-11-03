@@ -2,8 +2,6 @@
   'use strict';
 
   const initialise = () => {
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const shouldReduceMotion = () => document.documentElement.dataset.siteMotion !== 'always' && reduceMotion.matches;
     const select = (query, root = document) => root.querySelector(query);
     const selectAll = (query, root = document) => [...root.querySelectorAll(query)];
 
@@ -56,61 +54,6 @@
         if (outside) closeDialog(dialog);
       });
     });
-
-    const scenes = [
-      { id: 'gui' },
-      { id: 'cosmetics' },
-      { id: 'menu' },
-    ];
-    const sceneButtons = selectAll('[data-scene]');
-    const heroScenes = selectAll('[data-hero-scene]');
-    const sceneIndex = select('#scene-index');
-    let activeSceneId = null;
-    const setScene = (id, focus = false) => {
-      const index = scenes.findIndex((scene) => scene.id === id);
-      if (index === -1) return;
-      const animate = activeSceneId !== null && activeSceneId !== id && !shouldReduceMotion();
-      heroScenes.forEach((element) => {
-        const selected = element.dataset.heroScene === id;
-        element.hidden = !selected;
-        element.classList.toggle('active', selected);
-        element.classList.toggle('scene-entering', selected && animate);
-      });
-      if (sceneIndex) sceneIndex.textContent = String(index + 1).padStart(2, '0');
-      sceneButtons.forEach((button) => {
-        const selected = button.dataset.scene === id;
-        button.classList.toggle('active', selected);
-        button.setAttribute('aria-selected', String(selected));
-        button.tabIndex = selected ? 0 : -1;
-        if (selected && focus) button.focus();
-      });
-      activeSceneId = id;
-    };
-    heroScenes.forEach((scene) => {
-      const finishSceneEntry = (event) => {
-        if (event.target === scene) scene.classList.remove('scene-entering');
-      };
-      scene.addEventListener('animationend', finishSceneEntry);
-      scene.addEventListener('animationcancel', finishSceneEntry);
-    });
-    sceneButtons.forEach((button, buttonIndex) => {
-      button.addEventListener('click', () => setScene(button.dataset.scene));
-      button.addEventListener('keydown', (event) => {
-        let nextIndex;
-        if (event.key === 'ArrowRight') nextIndex = (buttonIndex + 1) % sceneButtons.length;
-        if (event.key === 'ArrowLeft') nextIndex = (buttonIndex - 1 + sceneButtons.length) % sceneButtons.length;
-        if (event.key === 'Home') nextIndex = 0;
-        if (event.key === 'End') nextIndex = sceneButtons.length - 1;
-        if (nextIndex === undefined) return;
-        event.preventDefault();
-        setScene(sceneButtons[nextIndex].dataset.scene, true);
-      });
-    });
-    if (sceneButtons.length) {
-      const initialScene = sceneButtons.find((button) => button.getAttribute('aria-selected') === 'true')
-        || sceneButtons.find((button) => button.classList.contains('active')) || sceneButtons[0];
-      setScene(initialScene.dataset.scene);
-    }
 
     const characters = { halo: 'Нимб', fox: 'Лиса', penguin: 'Пингвин', pig: 'Свинка' };
     const characterImage = select('#cosmetic-character');

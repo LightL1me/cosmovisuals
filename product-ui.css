@@ -82,7 +82,7 @@
 .cv-cosmetic-item b { font-size: .8em; font-weight: 500; color: #f6edff; padding: .2em .6em; border-radius: 2em; background: #9953eb; }
 
 /* Product previews share the same crisp HTML components at every size. */
-.hero-stage { width: min(1120px, calc(100% - 64px)); height: auto; aspect-ratio: 1.55; margin-top: 120px; }
+.hero-stage { width: min(1040px, calc(100% - 64px), max(480px, calc((100svh - 148px) * 1.55))); height: auto; aspect-ratio: 1.55; margin-top: 120px; }
 .hero-stage .interface-frame { width: 86%; left: 7%; top: 10px; }
 .hero-native-scene { min-height: 0; }
 .hero-watermark { left: 0; top: -14px; width: 295px; }
@@ -102,7 +102,7 @@
 /* Six quiet panels follow the supplied advantages reference. */
 .features.section-space { padding-top: 104px; }
 .features .section-heading { margin-bottom: 45px; }
-.features .feature-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 20px; }
+.features .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 20px; }
 .features .feature-grid > .feature-card { min-height: 390px; padding: 28px 22px 18px; border-radius: 18px; text-align: center; background: linear-gradient(180deg, #17111f55, #0b080e30); border-color: #ccb2e80c; }
 .features .feature-grid > .feature-card:hover { border-color: #c298ed28; }
 .features .feature-grid > .feature-card > h3 { font-size: 21px; font-weight: 500; letter-spacing: -.6px; margin-bottom: 16px; }
@@ -224,7 +224,6 @@
 .showcase-scene { min-height: 450px; }
 
 @media (max-width: 1050px) {
-  .features .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hero-stage { margin-top: 105px; }
   .hero-target { width: 210px; }
   .hero-watermark { width: 245px; }
@@ -394,5 +393,14 @@
 
   [data-gui-interactive="true"] .cv-switch[aria-checked="true"] > span {
     translate: 19px 0;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero .spec-strip { position: relative; }
+  .hero .hero-stage { perspective: none; }
+  .hero-stage .interface-frame {
+    transform: none;
+    filter: none;
   }
 }

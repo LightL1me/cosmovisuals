@@ -215,16 +215,6 @@ dialog{width:480px;max-width:calc(100% - 32px);padding:43px 34px 32px;border:1px
   }
 }
 
-.hero-version {
-  margin-bottom: 16px;
-  padding: 6px 12px;
-  border: 1px solid #ad7df153;
-  border-radius: 999px;
-  background: #241333;
-  color: #e4cdfd;
-  font-size: 12px;
-}
-
 .hero-cover .hero-copy {
   animation: rift-copy-enter 480ms ease-out both;
 }
@@ -266,4 +256,247 @@ dialog{width:480px;max-width:calc(100% - 32px);padding:43px 34px 32px;border:1px
   .hud-toolbar { flex-wrap: wrap; gap: 8px 14px; }
   .hud-toolbar label { min-height: 44px; font-size: 12px; }
   .hud-toolbar button { min-height: 44px; }
+}
+
+.dialog-close {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+}
+
+#experience .section-heading { margin-bottom: 18px; }
+#experience { scroll-margin-top: 88px; }
+#experience:target { padding-top: clamp(40px, 5vw, 72px); }
+#experience .comparison-wide {
+  width: min(880px, calc(100% - 32px), max(280px, calc((100svh - 380px) * 1.726)));
+  border: 0;
+  box-shadow: none;
+  background: #100b16;
+}
+
+#experience .compare-divider {
+  background: #fff;
+  box-shadow: none;
+}
+
+#experience .compare-divider > span {
+  width: clamp(40px, 5.4vw, 56px);
+  height: clamp(40px, 5.4vw, 56px);
+  gap: 3px;
+  border: 2px solid #ffffffe0;
+  background: #ffffff40;
+  color: #fff;
+}
+
+#experience .compare-divider > span::before,
+#experience .compare-divider > span::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border: solid currentColor;
+  border-width: 0 2px 2px 0;
+}
+
+#experience .compare-divider > span::before { rotate: 135deg; }
+#experience .compare-divider > span::after { rotate: -45deg; }
+
+#experience .comparison:focus-within {
+  outline: 2px solid #c396ff;
+  outline-offset: 4px;
+}
+
+.socials .section-heading { margin-bottom: 26px; }
+
+.socials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.socials-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 88px;
+  padding: 18px;
+  border: 1px solid #be91ef32;
+  border-radius: 18px;
+  background: #16101e;
+  transition: border-color .2s, background .2s;
+}
+
+.socials-card:is(:hover, :focus-visible) {
+  border-color: #bd91f0;
+  background: #241633;
+}
+
+.socials-card > svg { color: #cba2ff; }
+.socials-card > svg:last-child { margin-inline-start: auto; width: 16px; }
+.socials-card strong, .socials-card small { display: block; }
+.socials-card strong { font-size: 17px; }
+.socials-card small { margin-top: 4px; color: #b5a5c2; font-size: 12px; }
+
+@media (max-width: 620px) {
+  .socials-grid { grid-template-columns: 1fr; }
+}
+
+.feature-section {
+  position: relative;
+  isolation: isolate;
+}
+
+.feature-section::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 calc((100% - 100vw) / 2);
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 42%, #3d186553, transparent 68%),
+    url("assets/flow-field.svg") center / cover no-repeat;
+  animation: feature-wave-color 14s ease-in-out infinite alternate;
+}
+
+@keyframes feature-wave-color {
+  from { filter: hue-rotate(-20deg); opacity: .55; background-position: center, 40% center; }
+  to { filter: hue-rotate(50deg); opacity: .95; background-position: center, 60% center; }
+}
+
+.feature-section > .section-heading {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+  gap: 24px;
+  text-align: left;
+}
+
+.feature-section > .section-heading p {
+  padding-inline-start: 18px;
+  border-inline-start: 1px solid #c59cf340;
+}
+
+.features-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 3fr);
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.feature-section .feature-hud {
+  min-height: 230px;
+  background: linear-gradient(90deg, #140e21 7%, #140e21e8 31%, #140e2133 100%),
+    url("assets/gameplay-on.webp") center / cover;
+}
+
+.feature-hud p { max-width: 250px; }
+
+.features-notes { display: grid; gap: 8px; }
+.features-notes article {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 1px solid #c59cf326;
+  border-radius: 14px;
+  background: #171020df;
+}
+.features-notes svg { color: #c39aff; }
+.features-notes h3 { font-size: 15px; margin: 0; }
+.features-notes p { color: #baadca; margin: 4px 0 0; font-size: 12px; }
+
+#features .feature-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+#features .feature-grid > .feature-card {
+  min-height: 0;
+  margin: 0;
+  padding: 22px;
+  text-align: left;
+  background: #15101ddd;
+}
+#features .feature-grid > .feature-card > p { min-height: 0; margin-inline: 0; }
+.feature-effects img { width: 100%; height: 195px; object-fit: contain; }
+#features .cosmetics-card .cosmetic-text { width: 100%; }
+#features .cosmetics-card .character-stage {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: 195px;
+}
+#features .cosmetic-options {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: start;
+}
+
+.faq-list summary > span { position: relative; }
+.faq-list summary > span::before,
+.faq-list summary > span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 11px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transform: translate(-50%, -50%);
+}
+.faq-list summary > span::after { transform: translate(-50%, -50%) rotate(90deg); }
+
+@media (max-width: 760px) {
+  .feature-section > .section-heading,
+  .features-overview,
+  #features .feature-grid { grid-template-columns: minmax(0, 1fr); }
+  .feature-section > .section-heading { gap: 8px; }
+}
+
+.feature-section::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 max(-90px, calc((100% - 100vw) / 2));
+  pointer-events: none;
+  opacity: .63;
+  background:
+    url("assets/nether-star-violet.png") 2% 39% / clamp(21px, 3.2vw, 48px) auto no-repeat,
+    url("assets/nether-star-lilac.png") 94% 7% / clamp(17px, 2.7vw, 38px) auto no-repeat,
+    url("assets/nether-star-pale.png") 97% 81% / clamp(13px, 1.7vw, 24px) auto no-repeat,
+    url("assets/feature-dust.png") left 18% / min(680px, 77%) auto no-repeat,
+    url("assets/feature-dust.png") right bottom / min(960px, 100%) auto no-repeat;
+}
+
+@media (max-width: 760px) {
+  .feature-section::after {
+    opacity: .34;
+    background-position: left 4%, right 3%, right bottom, left top, right bottom;
+  }
+}
+
+.socials {
+  position: relative;
+  isolation: isolate;
+}
+
+.socials::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 max(-80px, calc((100% - 100vw) / 2)) -72px;
+  pointer-events: none;
+  opacity: .5;
+  background:
+    url("assets/nether-star-lilac.png") 10% 57% / 27px auto no-repeat,
+    url("assets/nether-star-pale.png") 91% 73% / 18px auto no-repeat,
+    url("assets/feature-dust.png") center bottom / min(1080px, 100%) 100% no-repeat,
+    radial-gradient(ellipse at 50% 78%, #36164b45, transparent 66%);
+}
+
+@media (max-width: 620px) {
+  .socials::before {
+    inset-block-end: -40px;
+    opacity: .32;
+    background-position: 8% 16%, 94% 91%, center bottom, center;
+  }
 }
