@@ -1,0 +1,121 @@
+[
+  {
+    "file": "logo.png",
+    "width": 1956,
+    "height": 1077,
+    "source": "codex-clipboard-a1d55b68-0e0d-4716-84d2-c88307a77a71.png",
+    "note": "Original alpha preserved, empty margins trimmed."
+  },
+  {
+    "file": "watermark.png",
+    "width": 324,
+    "height": 44,
+    "source": "codex-clipboard-6ecba105-258c-40ba-a41a-690a037d2790.png",
+    "note": "Dark pill silhouette; cyan sky fringe excluded."
+  },
+  {
+    "file": "gui.png",
+    "width": 1316,
+    "height": 974,
+    "source": "codex-clipboard-b273b98c-d056-41e0-bb2f-245bc6836c1c.png",
+    "note": "Rounded outer contour; no surrounding game background."
+  },
+  {
+    "file": "cosmetics.png",
+    "width": 1316,
+    "height": 973,
+    "source": "codex-clipboard-c742215e-d453-4558-978a-3c82e3a8ddcd.png",
+    "note": "Rounded outer contour; no surrounding game background."
+  },
+  {
+    "file": "menu.png",
+    "width": 950,
+    "height": 271,
+    "source": "codex-clipboard-34f1cdc1-77c9-4936-9e0c-2a73a4595ba9.png",
+    "note": "Only four interface cards; scenic background fully excluded."
+  },
+  {
+    "file": "hud-target.png",
+    "width": 248,
+    "height": 78,
+    "source": "codex-clipboard-7de36144-0229-4626-9806-c7472f6f5421.png",
+    "note": "Rounded outer contour; no surrounding game background."
+  },
+  {
+    "file": "hud-effects.png",
+    "width": 254,
+    "height": 77,
+    "source": "codex-clipboard-7de36144-0229-4626-9806-c7472f6f5421.png",
+    "note": "Rounded outer contour; no surrounding game background."
+  },
+  {
+    "file": "hud-cooldowns.png",
+    "width": 254,
+    "height": 76,
+    "source": "codex-clipboard-7de36144-0229-4626-9806-c7472f6f5421.png",
+    "note": "Rounded outer contour; no surrounding game background."
+  },
+  {
+    "file": "hud-near.png",
+    "width": 351,
+    "height": 86,
+    "source": "codex-clipboard-7de36144-0229-4626-9806-c7472f6f5421.png",
+    "note": "Rounded outer contour; no surrounding game background."
+  },
+  {
+    "file": "hud-boss.png",
+    "width": 544,
+    "height": 40,
+    "source": "codex-clipboard-7de36144-0229-4626-9806-c7472f6f5421.png",
+    "note": "Rounded outer contour; no surrounding game background."
+  },
+  {
+    "file": "hud-scoreboard.png",
+    "width": 358,
+    "height": 163,
+    "source": "codex-clipboard-7de36144-0229-4626-9806-c7472f6f5421.png",
+    "note": "Rounded outer contour; no surrounding game background."
+  },
+  {
+    "file": "character-halo.png",
+    "width": 76,
+    "height": 161,
+    "source": "codex-clipboard-c742215e-d453-4558-978a-3c82e3a8ddcd.png",
+    "note": "Pixel silhouette; card background and ground shadow removed; original RGB preserved."
+  },
+  {
+    "file": "character-fox.png",
+    "width": 87,
+    "height": 163,
+    "source": "codex-clipboard-c742215e-d453-4558-978a-3c82e3a8ddcd.png",
+    "note": "Pixel silhouette; card background and ground shadow removed; original RGB preserved."
+  },
+  {
+    "file": "character-penguin.png",
+    "width": 74,
+    "height": 147,
+    "source": "codex-clipboard-c742215e-d453-4558-978a-3c82e3a8ddcd.png",
+    "note": "Pixel silhouette; card background and ground shadow removed; original RGB preserved."
+  },
+  {
+    "file": "character-pig.png",
+    "width": 70,
+    "height": 164,
+    "source": "codex-clipboard-c742215e-d453-4558-978a-3c82e3a8ddcd.png",
+    "note": "Pixel silhouette; card background and ground shadow removed; original RGB preserved."
+  },
+  {
+    "file": "gameplay-on.webp",
+    "width": 1919,
+    "height": 1107,
+    "source": "codex-clipboard-7de36144-0229-4626-9806-c7472f6f5421.png",
+    "note": "Lossless copy of supplied gameplay screenshot."
+  },
+  {
+    "file": "gameplay-off.webp",
+    "width": 1919,
+    "height": 1112,
+    "source": "codex-clipboard-dabe8306-ba31-47a8-8cb0-984e3c50d7cc.png",
+    "note": "Lossless copy of supplied gameplay screenshot."
+  }
+]

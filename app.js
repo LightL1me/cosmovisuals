@@ -134,7 +134,7 @@
     ];
     const applyHudPosition = (item) => {
       const position = hudPositions.get(item);
-      if (item.hidden || !position) return;
+      if (item.hidden || !position || !playground.clientWidth) return;
       const [maxX, maxY] = hudBounds(item);
       item.style.left = `${position[0] * maxX}px`;
       item.style.top = `${position[1] * maxY}px`;
@@ -228,7 +228,7 @@
       if ('ResizeObserver' in window) {
         new ResizeObserver(() => hudItems.forEach(applyHudPosition)).observe(playground);
       }
-      select('#save-hud').addEventListener('click', () => {
+      select('#save-hud')?.addEventListener('click', () => {
         try {
           const positions = Object.fromEntries([...hudPositions].map(([item, position]) => [item.dataset.hud, position]));
           const visibility = Object.fromEntries(hudToggles.map((toggle) => [toggle.dataset.hudToggle, toggle.checked]));

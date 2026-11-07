@@ -45,10 +45,10 @@
 
   const tools = `<span class="cv-tool">${icon('palette')}</span><span class="cv-tool">${icon('crown')}</span><span class="cv-tool">${icon('file')}</span><span class="cv-tool">${icon('pin')}</span>`;
   const header = (page, interactive) => `<div class="cv-topbar">
-    <span class="cv-brand">${logo}<span><strong>CosmoVisuals</strong><small>0.7 BETA</small></span></span>
+    <span class="cv-brand">${logo}<strong>CosmoVisuals</strong></span>
     <div class="cv-categories" ${interactive ? 'role="group" aria-label="Категории модулей"' : ''}>${Object.entries(categories).map(([key, item]) => interactive
-      ? `<button type="button" data-cv-category="${key}" aria-pressed="${key === page}" class="${key === page ? 'is-current' : ''}">${item.label}<small>${item.count}</small></button>`
-      : `<span class="${key === page ? 'is-current' : ''}">${item.label}<small>${item.count}</small></span>`).join('')}</div>
+      ? `<button type="button" data-cv-category="${key}" aria-pressed="${key === page}" class="${key === page ? 'is-current' : ''}">${item.label} <small>${item.count}</small></button>`
+      : `<span class="${key === page ? 'is-current' : ''}">${item.label} <small>${item.count}</small></span>`).join('')}</div>
     <span class="cv-tools" aria-hidden="true">${tools}</span>
   </div>`;
   const footer = '<div class="cv-footer"><span class="cv-language"><b>RU</b><span>EN</span></span><span class="cv-quality">✦ &nbsp; Лёгкое <span>⌄</span></span></div>';
@@ -79,7 +79,7 @@
     }
 
     root.innerHTML = `<div class="cv-gui">${header(page, interactive)}
-      <div class="cv-section-title"><span><small>Категория</small><strong data-cv-title>${categories[page].label}</strong><small class="cv-count">CosmoVisuals 0.7</small></span>
+      <div class="cv-section-title"><span><small>Категория</small><strong data-cv-title>${categories[page].label}</strong></span>
         ${interactive ? `<label class="cv-search">${icon('search')}<input type="search" placeholder="Поиск" aria-label="Поиск модулей в примере CosmoVisuals"></label>` : `<span class="cv-search">${icon('search')}Поиск</span>`}
       </div><div class="cv-body"><div class="cv-module-grid" data-cv-list></div><aside class="cv-settings" aria-label="Настройки модуля"><div class="cv-settings-top"><strong data-cv-setting-name></strong></div><p data-cv-setting-description></p><div class="cv-setting-row"><span>Бинд</span><span class="cv-value">Не задан</span></div><div class="cv-setting-row" data-cv-aspect><span>Пресет</span>${interactive ? '<select aria-label="Пресет AspectRatio"><option>16:9</option><option>16:10</option><option>4:3</option></select>' : '<span class="cv-value">16:9 ⌄</span>'}</div></aside></div>${footer}</div>`;
 
